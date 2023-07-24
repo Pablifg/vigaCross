@@ -5,6 +5,7 @@ La idea inicial es ver cómo funciona la colaboración en proyectos y aprender s
 
 ## Archivos
 cross.py : Por ahora es el archivo principal que contiene toda el programa.
+
 interaccion_usuario.py : modulo que interactua con el usuario solicitando informacion.
 ## Por hacer 1
 ### Crear rutina que interactua con el usuario
