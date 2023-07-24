@@ -22,6 +22,10 @@ Unidades:
 ------------------------------------------------------------------------------
 """
 
+FIN="""
+------------------------------------------------------------------------------
+"""
+
 # PRESENTACION EN LA MEDIDA QUE AVANZA LA RUTINA
 
 encabezado.append(TITULO)
@@ -183,12 +187,13 @@ def entrada_datos():
     print_encabezado(encabezado)
     rigidez_por_cada_tramos = rigideces_tramos(nTramos)
     encabezado.append(f"Rigidez en cada tramo : {rigidez_por_cada_tramos}")
+    encabezado.append(FIN)
     limpiar_consola()
 
     # Resumen
     print_encabezado(encabezado)
 
-    diccionario = {"longTramos": longitud_tramos , 
+    diccionario = {"longTramos": long_tramos , 
                    "cargasTramos": q_distribuida, 
                    "rigidecesTramos": rigidez_por_cada_tramos,
                    "apoyoIzq": apoyo_izq,
