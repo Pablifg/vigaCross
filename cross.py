@@ -1,19 +1,27 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from interaccion_usuario import entrada_datos
 ##### INTRODUCCIÓN DE DATOS AL PROGRAMA #######
 	#tramos en metros, cargas en KN/m positivas hacia abajo, Rigideces en KNm2
 
 
-longTramos = np.array([2, 4, 4, 5, 5, 5, 5])
-cargasTramos = np.array([10, 10, 10, 10, 10, 10, 10])
-rigidecesTramos = np.array([1, 1, 1, 1, 1, 1, 1])
+#longTramos = np.array([2, 4, 4, 5, 5, 5, 5])
+#cargasTramos = np.array([10, 10, 10, 10, 10, 10, 10])
+#rigidecesTramos = np.array([1, 1, 1, 1, 1, 1, 1])
+#apoyoIzq = "empotrado"
+#apoyoDer = "empotrado"
 
-apoyoIzq = "empotrado"
-apoyoDer = "empotrado"
+entrada_por_consola = entrada_datos()
+longTramos = np.array(entrada_por_consola["longTramos"])
+cargasTramos = np.array(entrada_por_consola["cargasTramos"])
+rigidecesTramos = np.array(entrada_por_consola["rigidecesTramos"])
+apoyoIzq = entrada_por_consola["apoyoIzq"]
+apoyoDer = entrada_por_consola["apoyoDer"]
+noTramos = entrada_por_consola["noTramos"]
 
 ##### CÁLCULO DE DISTRIBUCIÓN DE MOMENTOS #######
 
-noTramos = longTramos.size
+
 print("número de tramos = ", noTramos)
 
 factDist = np.zeros(noTramos*2)
