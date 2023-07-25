@@ -5,24 +5,25 @@ from interaccion_usuario import entrada_datos
 	#tramos en metros, cargas en KN/m positivas hacia abajo, Rigideces en KNm2
 
 
-#longTramos = np.array([2, 4, 4, 5, 5, 5, 5])
-#cargasTramos = np.array([10, 10, 10, 10, 10, 10, 10])
-#rigidecesTramos = np.array([1, 1, 1, 1, 1, 1, 1])
-#apoyoIzq = "empotrado"
-#apoyoDer = "empotrado"
+longTramos = np.array([2, 4, 4, 5, 5, 5, 5])
+cargasTramos = np.array([10, 10, 10, 10, 10, 10, 10])
+rigidecesTramos = np.array([1, 1, 1, 1, 1, 1, 1])
+apoyoIzq = "empotrado"
+apoyoDer = "empotrado"
+#noTramos =longTramos.size
+
+
 
 entrada_por_consola = entrada_datos()
-longTramos = np.array(entrada_por_consola["longTramos"])
-cargasTramos = np.array(entrada_por_consola["cargasTramos"])
-rigidecesTramos = np.array(entrada_por_consola["rigidecesTramos"])
+longTramos =entrada_por_consola["longTramos"]
+cargasTramos = entrada_por_consola["cargasTramos"]
+rigidecesTramos = entrada_por_consola["rigidecesTramos"]
 apoyoIzq = entrada_por_consola["apoyoIzq"]
 apoyoDer = entrada_por_consola["apoyoDer"]
 noTramos = entrada_por_consola["noTramos"]
 
 ##### CÁLCULO DE DISTRIBUCIÓN DE MOMENTOS #######
 
-
-print("número de tramos = ", noTramos)
 
 factDist = np.zeros(noTramos*2)
 
@@ -159,6 +160,8 @@ for i in range(noTramos):
 		V = np.append(Vant,V)
 		M = np.append(Mant,M)
 
+print("Calculos : OK!")
+print("Ver grafico con los resultados...")
 plt.subplot(2,1,1)
 plt.plot(xx,V)
 plt.subplot(2,1,2)
