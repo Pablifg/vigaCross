@@ -1,0 +1,14 @@
+{
+    "Nombre": "Viga", 
+    "Método":  
+    [
+        {
+            "cross": {
+                "longitudTramos": [2, 4, 4, 5, 5, 5, 5],
+                "cargasTramos": [10, 10, 10, 10, 10, 10, 10],
+                "rigidecesTramos": [1, 1, 1, 1, 1, 1, 1]
+            }
+        }
+        
+    ]
+}
